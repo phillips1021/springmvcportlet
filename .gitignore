@@ -1,0 +1,6 @@
+target/
+nb-configuration.xml
+settings.xml
+classpath
+
+nbactions.xml

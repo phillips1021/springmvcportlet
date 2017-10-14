@@ -1,0 +1,43 @@
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0">
+
+    <portlet id="springmvcportlet">        
+        <description>Spring MVC Portlet Example</description>
+        <portlet-name>springmvcportlet</portlet-name>
+        <display-name>Spring MVC Portlet Example</display-name>  
+          
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>     
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:applicationContext.xml</value>
+        </init-param>  
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>help</portlet-mode>
+        </supports>       
+        <!-- The namespace for the actions configured for view mode -->
+        <init-param>
+            <name>viewNamespace</name>
+            <value>/portlet</value>
+        </init-param>        
+        <expiration-cache>0</expiration-cache>        
+         
+        <supported-locale>en</supported-locale>        
+        <portlet-info>
+            <title>Spring MVC Portlet Example</title>
+            <short-title>Spring MVC Portlet Example</short-title>
+        </portlet-info>
+    </portlet>
+    <user-attribute>
+        <description>uid</description>
+        <name>uid</name>
+    </user-attribute> 
+
+
+    
+</portlet-app>
+
